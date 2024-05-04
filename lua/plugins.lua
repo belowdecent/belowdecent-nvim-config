@@ -80,41 +80,59 @@ require("lazy").setup({
 	},
 
 	{
-		"https://github.com/folke/tokyonight.nvim",
+		"https://github.com/maxmx03/fluoromachine.nvim",
 		opts = {
-			style = "moon", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
-			styles = {
-				comments = { italic = true },
-				keywords = { italic = true },
-				functions = {},
-				variables = {},
-				-- Background styles. Can be "dark", "transparent" or "normal"
-				sidebars = "dark", -- style for sidebars, see below
-				floats = "dark", -- style for floating windows
-			},
+			glow = true,
+			theme = "fluoromachine",
 		},
 	},
+
+	-- {
+	-- 	"https://github.com/folke/tokyonight.nvim",
+	-- 	opts = {
+	-- 		style = "moon", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
+	-- 		styles = {
+	-- 			comments = { italic = true },
+	-- 			keywords = { italic = true },
+	-- 			functions = {},
+	-- 			variables = {},
+	-- 			-- Background styles. Can be "dark", "transparent" or "normal"
+	-- 			sidebars = "dark", -- style for sidebars, see below
+	-- 			floats = "dark", -- style for floating windows
+	-- 		},
+	-- 	},
+	-- },
 
 	{
 		"nvim-lualine/lualine.nvim",
 		opts = {
 			options = {
 				icons_enabled = false,
-				theme = "tokyonight",
+				theme = "fluoromachine",
 				component_separators = "|",
 				section_separators = "",
 			},
 		},
 		config = function()
-			vim.cmd.colorscheme("tokyonight")
+			vim.cmd.colorscheme("fluoromachine")
 		end,
 	},
 
-	{
-		"lukas-reineke/indent-blankline.nvim",
-		main = "ibl",
-		opts = {},
-	},
+	-- {
+	-- 	"lukas-reineke/indent-blankline.nvim",
+	-- 	main = "ibl",
+	-- 	opts = {
+	-- 		indent = {
+	-- 			char = "┆",
+	-- 			priority = 1023,
+	-- 		},
+	-- 		scope = {
+	-- 			char = "┇",
+	-- 			show_start = false,
+	-- 			show_end = false,
+	-- 		},
+	-- 	},
+	-- },
 
 	-- "gc" to comment visual regions/lines
 	{ "numToStr/Comment.nvim", opts = {} },
